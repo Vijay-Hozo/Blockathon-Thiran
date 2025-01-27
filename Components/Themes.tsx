@@ -17,7 +17,7 @@ const Themes = () => {
         <p className="text-lg mt-4 text-gray-300">
           Dive into cutting-edge themes that push the boundaries of technology. Choose your challenge and innovate for the future!
         </p>
-        <div className="flex justify-center items-center w-[200px] md:grid-cols-4 gap-6 mt-10 ">
+        <div className="flex justify-center md:grid-cols-4 gap-6 mt-10 ">
           {themes.map((theme, index) => (
             <div
               key={index}
