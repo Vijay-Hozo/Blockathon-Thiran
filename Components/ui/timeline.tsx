@@ -9,6 +9,7 @@ import React, { useEffect, useRef, useState } from "react";
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
+  
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {

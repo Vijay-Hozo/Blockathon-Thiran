@@ -1,13 +1,15 @@
 "use client";
 import React, { useState } from "react";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 
 const navbar = [
-  { id: 1, name: "About", href: "#about" },
-  { id: 2, name: "Themes", href: "#themes" },
-  { id: 3, name: "Timeline", href: "#timeline" },
-  { id: 4, name: "Prizes", href: "#prizes" },
-  { id: 5, name: "Guidelines", href: "#guidelines" },
-  { id: 6, name: "FAQ", href: "#faq" },
+  { id: 1, name: "About", href: "about" },
+  { id: 2, name: "Themes", href: "themes" },
+  { id: 3, name: "Timeline", href: "timeline" },
+  { id: 4, name: "Prizes", href: "prizes" },
+  { id: 5, name: "Guidelines", href: "guidelines" },
+  { id: 6, name: "FAQ", href: "faq" },
+  { id: 7, name: "Contact", href: "contact" },
 ];
 
 const Navbar = () => {
@@ -21,17 +23,18 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 text-sm">
           {navbar.map((item) => (
             <li key={item.id}>
-              <a
-                href={item.href}
-                className="text-lg hover:text-indigo-400 transition duration-200"
+              <Link
+                to={item.href} 
+                smooth={true} 
+                duration={500} 
+                className="text-lg hover:text-indigo-400 transition duration-200 hover:underline"
               >
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -64,13 +67,15 @@ const Navbar = () => {
           <ul>
             {navbar.map((item) => (
               <li key={item.id}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href} // Use 'to' prop for the section id
+                  smooth={true} // Enable smooth scroll
+                  duration={500} // Adjust the scroll duration as needed
                   className="block text-lg hover:text-indigo-400 transition duration-200"
                   onClick={() => setIsMenuOpen(false)} // Close menu on link click
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

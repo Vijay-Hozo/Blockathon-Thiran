@@ -10,7 +10,7 @@ import FAQ from '@/Components/FAQ'
 import Footer from '@/Components/Footer'
 const page = () => {
   return (
-    <div className='w-full h-screen overflow-x-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden xl:overflow-x-hidden'>
+    <div className=''>
       <Navbar />
       <Hero />
       <Countdown />

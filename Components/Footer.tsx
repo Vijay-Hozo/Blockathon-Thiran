@@ -4,7 +4,7 @@
 
 export default function Footer() {
   return (
-    <div className="bg-gray-900 text-white py-8">
+    <section id="contact" className="bg-gray-900 text-white py-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
         <div>
           <h2 className="text-xl font-bold mb-4">Blockathon</h2>
@@ -60,6 +60,6 @@ export default function Footer() {
       <div className="text-center mt-8 text-sm">
         For more details of our institution please visit <a href="https://www.sece.ac.in" className="text-blue-400 hover:underline">www.sece.ac.in</a>
       </div>
-    </div>
+    </section>
   );
 }

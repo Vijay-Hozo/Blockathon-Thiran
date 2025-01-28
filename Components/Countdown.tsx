@@ -10,7 +10,7 @@ interface TimeLeft {
 
 const Countdown = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    const targetDate = new Date("2025-01-31T00:00:00").getTime();
+    const targetDate = new Date("2025-02-02T00:00:00").getTime();
     const currentDate = new Date().getTime();
     const difference = targetDate - currentDate;
 
@@ -43,14 +43,15 @@ const Countdown = () => {
   };
 
   return (
-    <div className="bg-black text-white py-10 overflow-x-hidden">
+    <section id="countdown" 
+    className="bg-black text-white py-10 overflow-x-hidden">
       <div className="container mx-auto text-center px-4">
         <h2 className="text-4xl md:text-6xl font-bold text-blue-500 tracking-wide">
           Countdown
         </h2>
         <p className="text-base md:text-xl mt-2">Countdown Until the Event</p>
         <p className="text-sm md:text-lg mt-2 font-semibold">
-          Last Date to Register: <span className="text-indigo-400">January 31, 2025</span>
+          Last Date to Register: <span className="text-indigo-400">February 2, 2025</span>
         </p>
         <div className="flex flex-wrap justify-center gap-6 mt-6">
           {Object.keys(timeLeft).map((interval) => (
@@ -72,7 +73,7 @@ const Countdown = () => {
           Register Now
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

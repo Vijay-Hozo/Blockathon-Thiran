@@ -3,7 +3,7 @@ import Cup from "@/public/Images/Cup.png";
 import Image from "next/image";
 const Prizes = () => {
   return (
-    <div className="bg-black text-white text-center py-10">
+    <section id="prizes" className="bg-black text-white text-center py-10">
       <h1 className="text-6xl font-bold text-blue-500 mb-10">Prizes</h1>
       <div className="flex flex-wrap justify-center gap-6">
         <div className="bg-gray-800 rounded-xl p-6 w-64 text-center shadow-lg">
@@ -56,7 +56,7 @@ const Prizes = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

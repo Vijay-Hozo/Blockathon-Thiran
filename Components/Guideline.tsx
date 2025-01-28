@@ -2,7 +2,7 @@ import React from "react";
 
 const Guideline = () => {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col justify-center items-center py-16 px-6 overflow-x-hidden">
+    <section id="guidelines" className="min-h-screen bg-black text-white flex flex-col justify-center items-center py-16 px-6 overflow-x-hidden">
       <div className="max-w-6xl w-full flex flex-col lg:flex-row justify-evenly gap-10">
         {/* Team Registration Section */}
         <div className="bg-gray-800 rounded-xl shadow-lg p-6 lg:p-8 text-center lg:text-left flex-1">
@@ -94,7 +94,7 @@ const Guideline = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

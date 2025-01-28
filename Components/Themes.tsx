@@ -1,39 +1,50 @@
 "use client";
 import React from "react";
-import { Shield, Leaf, Bot, Cpu } from "lucide-react";
+import { Cross,Landmark,Coins,Container,Wifi ,Bitcoin} from "lucide-react";
 
 const Themes = () => {
   const themes = [
+    
     {
-      icon: <Shield className="w-12 h-12 mx-auto text-blue-400" />, 
-      label: "Blockchain and Cybersecurity",
-      description: "Explore innovative solutions to secure and transform digital networks. Build the future of blockchain and cybersecurity.",
+      icon: <Cross className="w-12 h-12 mx-auto text-blue-400" />, 
+      label: "Health Care",
+      description: "Discover cutting-edge technologies to enhance healthcare systems and improve patient outcomes. Leverage digital solutions to streamline medical processes and foster innovation in health services.",
     },
     {
-      icon: <Leaf className="w-12 h-12 mx-auto text-green-400" />, 
-      label: "Agriculture Technology",
-      description: "Revolutionize farming practices with modern technological solutions. Develop sustainable agriculture for the future.",
+      icon: <Landmark className="w-12 h-12 mx-auto text-blue-400" />, 
+      label: "Banking and Finance",
+      description: "Transform the financial industry with secure, efficient, and scalable digital solutions. Drive the future of banking by integrating blockchain, AI, and cybersecurity technologies to enhance financial services.",
     },
     {
-      icon: <Bot className="w-12 h-12 mx-auto text-red-400" />, 
-      label: "Robotics and Drones",
-      description: "Build cutting-edge robots and aerial drones to automate the future. Create intelligent machines for a smarter world.",
+      icon: <Coins className="w-12 h-12 mx-auto text-blue-400" />, 
+      label: "Insurance",
+      description: "Revolutionize the insurance industry with modern, secure, and efficient digital solutions. Innovate processes such as claims handling, underwriting, and customer service using blockchain and data-driven technologies.",
     },
     {
-      icon: <Cpu className="w-12 h-12 mx-auto text-yellow-400" />, 
-      label: "AI & ML in Hardware",
-      description: "Integrate intelligent algorithms with advanced hardware design. Develop AI and ML solutions for the next generation of devices.",
+      icon: <Container className="w-12 h-12 mx-auto text-blue-400" />, 
+      label: "Supply Chain Management",
+      description: "Optimize and secure supply chain operations with blockchain and digital technologies. Improve transparency, reduce costs, and increase efficiency through smart contracts and secure network solutions.",
     },
+    {
+      icon: <Wifi className="w-12 h-12 mx-auto text-blue-400" />, 
+      label: "Internet of Things",
+      description: "Enable the future of interconnected devices with secure, scalable solutions. Harness IoT technologies to enhance automation, data collection, and real-time monitoring for various industries.",
+    },
+    {
+      icon: <Bitcoin className="w-12 h-12 mx-auto text-blue-400" />, 
+      label: "Crypto currency",
+      description: "Empower financial transactions and digital assets with innovative cryptocurrency solutions. Secure, decentralized platforms that enable transparent, fast, and efficient blockchain-powered exchanges.",
+    }    
   ];
 
   return (
-    <div className="bg-black text-white py-16 overflow-x-hidden">
+    <section id="themes" className="bg-black text-white py-16 overflow-x-hidden">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-blue-500">Themes</h2>
         <p className="text-base sm:text-lg mt-4 text-gray-300">
           Dive into cutting-edge themes that push the boundaries of technology. Choose your challenge and innovate for the future!
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 flex-wrap gap-6 mt-10">
           {themes.map((theme, index) => (
             <div
               key={index}
@@ -54,7 +65,7 @@ const Themes = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

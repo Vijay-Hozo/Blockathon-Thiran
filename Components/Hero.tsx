@@ -24,7 +24,6 @@ const registration = () => {
 
 const Hero = () => (
   <BackgroundLines className="relative flex items-center justify-center min-h-screen bg-[#080D18] text-white overflow-x-hidden" >
-    <div className=" inset-0"></div>
     <div className=" z-10 flex flex-col items-center text-center max-w-4xl px-4">
       <h1 className="text-[#f9faf8] p-5 text-5xl md:text-6xl font-bold">
         ⚡BLOCKATHON⚡
@@ -33,7 +32,7 @@ const Hero = () => (
       <div className="flex flex-col items-center space-y-2 mt-4">
         <div className="bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full md:w-3/4 blur-sm" />
         <div className="bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full md:w-2/3" />
-        <div className="bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-full md:w-1/3 blur-sm" />
+        {/* <div className="bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-full md:w-1/3 blur-sm" /> */}
         <div className="bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[10px] w-full md:w-1/4" />
       </div>
 
@@ -56,6 +55,10 @@ const Hero = () => (
             <p className="text-sm md:text-base text-center">{item.description}</p>
           </div>
         ))}
+      </div>
+
+      <div>
+        <a href="https://shorturl.at/BEKBn" target="_blank">PPT Template</a>
       </div>
 
       <button
