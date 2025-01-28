@@ -1,13 +1,12 @@
-import type { Config } from "tailwindcss";
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        zentry: ["zentry", "sans-serif"],
+      zentry: ["zentry", "sans-serif"],
         general: ["general", "sans-serif"],
         "circular-web": ["circular-web", "sans-serif"],
         "robert-medium": ["robert-medium", "sans-serif"],
@@ -23,8 +22,8 @@ export default {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
-      }
     },
   },
   plugins: [],
-} satisfies Config;
+}
+
