@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const navbar = [
   { id: 1, name: "About", href: "#about" },
@@ -11,19 +11,19 @@ const navbar = [
 ];
 
 const Navbar = () => {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className=" w-full z-10 fixed top-0 text-white">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold font-robert-regular">BLOCKATHON</h1>
+    <nav className="w-full z-20 fixed top-0 left-0 text-white bg-[#080D18] shadow-md overflow-x-hidden">
+      <div className="relative container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold">BLOCKATHON</h1>
 
-        <ul className="flex md:flex space-x-6 font-zentry-regular text-sm cursor-pointer">
+        <ul className="hidden md:flex space-x-6 text-sm">
           {navbar.map((item) => (
             <li key={item.id}>
               <a
                 href={item.href}
-                className="text-lg hover:text-indigo-400 transition duration-200 cursor-pointer"
+                className="text-lg hover:text-indigo-400 transition duration-200"
               >
                 {item.name}
               </a>
@@ -32,7 +32,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        {/* <button
+        <button
           className="md:hidden focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
@@ -48,32 +48,34 @@ const Navbar = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+              d={
+                isMenuOpen
+                  ? "M6 18L18 6M6 6l12 12"
+                  : "M4 6h16M4 12h16m-7 6h7"
+              }
             />
           </svg>
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {/* <div
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } md:hidden bg-gray-700 space-y-4 py-4 px-6`}
-      >
-        <ul>
-          {navbar.map((item) => (
-            <li key={item.id}>
-              <a
-                href={item.href}
-                className="block text-lg hover:text-indigo-400 transition duration-200"
-                onClick={() => setIsMenuOpen(false)} // Close menu on link click
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul> */}
-      </div> 
+      {isMenuOpen && (
+        <div className="md:hidden bg-gray-800 space-y-4 py-4 px-6">
+          <ul>
+            {navbar.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={item.href}
+                  className="block text-lg hover:text-indigo-400 transition duration-200"
+                  onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="mb-2">
             <p className="font-semibold">Student Coordinator</p>
             <p>MR. AKSHAY RAM: +91 63742 95841</p>
-            {/* <p>A.VIJAY: +91 88387 25310</p> */}
+            <p>A.VIJAY: +91 88387 25310</p>
           </div>
           <div className="flex space-x-4 mt-4">
             <a href="#" className="text-white hover:text-gray-400">
@@ -42,7 +42,8 @@ export default function Footer() {
           <div className="bg-gray-800">
             <div className="flex items-center p-2">
               <iframe
-                src="https://maps.app.goo.gl/ysW3povHSXANoFwA7"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3596.8117979180533!2d77.06021780098219!3d10.826680637430053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba84ee37569ae7f%3A0x3c5b1824b6e79192!2sSri%20Eshwar%20College%20of%20Engineering%2C%20Coimbatore!5e1!3m2!1sen!2sin!4v1738041684033!5m2!1sen!2sin"
+                //  width="600" height="450"
                 width="100%"
                 height="150"
                 style={{ border: 0 }}
