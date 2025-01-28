@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Link } from "react-scroll"; // Import Link from react-scroll
+// import { Link } from "react-scroll"; // Import Link from react-scroll
 
 const navbar = [
   { id: 1, name: "About", href: "about" },
@@ -23,14 +23,14 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 text-sm">
           {navbar.map((item) => (
             <li key={item.id}>
-              <Link
+              {/* <Link
                 to={item.href} 
                 smooth={true} 
                 duration={500} 
                 className="text-lg hover:text-indigo-400 transition duration-200 hover:underline"
               >
                 {item.name}
-              </Link>
+              </Link> */}
             </li>
           ))}
         </ul>
@@ -67,7 +67,7 @@ const Navbar = () => {
           <ul>
             {navbar.map((item) => (
               <li key={item.id}>
-                <Link
+                {/* <Link
                   to={item.href} // Use 'to' prop for the section id
                   smooth={true} // Enable smooth scroll
                   duration={500} // Adjust the scroll duration as needed
@@ -75,7 +75,7 @@ const Navbar = () => {
                   onClick={() => setIsMenuOpen(false)} // Close menu on link click
                 >
                   {item.name}
-                </Link>
+                </Link> */}
               </li>
             ))}
           </ul>
